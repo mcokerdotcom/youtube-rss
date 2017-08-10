@@ -15,7 +15,8 @@
             background: #222;
             padding: 2em 0;
             font-family: Roboto, sans-serif;
-            font-size: 1.3vw;
+						font-size: 1.5vw;
+						line-height: 1.4;
         }
         a {
             text-decoration: none;
@@ -50,7 +51,6 @@
             display: flex;
             background: #222;
             border: 1px solid #000;
-            padding: 0 0 .75em;
             flex-wrap: wrap;
             align-items: flex-start;
             transition: background .25s, box-shadow .25s;
@@ -65,7 +65,6 @@
         .thumb {
             width: 100%;
             display: block;
-            margin: 0 0 .75em;
             transition: transform .25s, box-shadow .25s;
             transform-origin: 50% 80%;
         }
@@ -77,7 +76,7 @@
             display: block;
             color: #fff;
             margin: 0 1em;
-            padding: 0.5em 1em;
+            padding: .5em;
             transition: color .25s;
         }
         .vid:hover .vidTitle {
