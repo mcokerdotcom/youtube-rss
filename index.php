@@ -15,8 +15,8 @@
             background: #222;
             padding: 2em 0;
             font-family: Roboto, sans-serif;
-						font-size: 1.5vw;
-						line-height: 1.4;
+            font-size: 1.5vw;
+            line-height: 1.4;
         }
         a {
             text-decoration: none;
@@ -81,6 +81,15 @@
         }
         .vid:hover .vidTitle {
             color: #000;
+        }
+
+        @media (max-width: 768px<?php) {
+            body {
+                font-size: 2.75vw;
+            }
+            .vid {
+                width: calc(50% - 1em);
+            }
         }
     </style>
 </head>
