@@ -12,7 +12,7 @@
             margin: 0; padding: 0; box-sizing: border-box;
         }
         body {
-            background: #333;
+            background: #222;
             padding: 2em 0;
             font-family: Roboto, sans-serif;
             font-size: 1.3vw;
@@ -26,10 +26,6 @@
             display: flex;
             flex-wrap: wrap;
         }
-        .curved {
-            border-radius: 5px;
-            overflow: hidden;
-        }
         .title {
             background: #000;
             padding: .5em 1em;
@@ -40,7 +36,7 @@
         }
         .channel {
             margin: 0 0 2em;
-            background: #f0f0f0;
+            background: #444;
             border: 1px solid #000;
         }
         .channelList {
@@ -52,11 +48,16 @@
             width: calc(25% - 1em);
             margin: 0 1em 1em 0;
             display: flex;
-            background: #ddd;
+            background: #222;
             border: 1px solid #000;
-            padding: 0 0 .5em;
+            padding: 0 0 .75em;
             flex-wrap: wrap;
             align-items: flex-start;
+            transition: background .25s, box-shadow .25s;
+        }
+        .vid:hover {
+            box-shadow: 0 4px 5px -2px rgba(0,0,0,0.4);
+            background: #f0f0f0;
         }
         .vid:nth-child(4n) {
             margin-right: 0;
@@ -64,15 +65,23 @@
         .thumb {
             width: 100%;
             display: block;
-            margin: 0 0 .5em;
+            margin: 0 0 .75em;
+            transition: transform .25s, box-shadow .25s;
+            transform-origin: 50% 80%;
+        }
+        .vid:hover .thumb {
+            transform: scale(1.05);
+            box-shadow: 0 2px 3px rgba(0,0,0,0.5);
         }
         .vidTitle {
-            background: #ddd; */
             display: block;
+            color: #fff;
+            margin: 0 1em;
+            padding: 0.5em 1em;
+            transition: color .25s;
+        }
+        .vid:hover .vidTitle {
             color: #000;
-            border-left: 1px solid #999;
-            margin-left: 1em;
-            padding: 0 1em;
         }
     </style>
 </head>
@@ -93,7 +102,7 @@ if (isset($_GET['channel'])) {
         $title = $array['title'];
         $channelUrl = $array['author']['uri'];
         ?>
-        <div class="channel curved">
+        <div class="channel">
         <h2 class="title"><a class="titleLink" href="<?=$channelUrl;?>"><?=$title;?></a></h2>
         <div class="channelList">
         <?
@@ -103,7 +112,7 @@ if (isset($_GET['channel'])) {
                 $thumb = 'http://img.youtube.com/vi/'.$id.'/0.jpg';
                 $vidTitle = $entry['title'];
                 ?>
-                    <a class="vid curved" href="<?=$url;?>"><img class="thumb" src="<?=$thumb;?>"><span class="vidTitle"><?=$vidTitle;?></span></a>
+                    <a class="vid" href="<?=$url;?>"><img class="thumb" src="<?=$thumb;?>"><span class="vidTitle"><?=$vidTitle;?></span></a>
                 <?
         }
         ?>
