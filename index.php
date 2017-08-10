@@ -14,7 +14,7 @@
         body {
             background: #333;
             padding: 2em 0;
-font-family: Roboto, sans-serif;
+            font-family: Roboto, sans-serif;
             font-size: 1.3vw;
         }
         a {
@@ -70,9 +70,9 @@ font-family: Roboto, sans-serif;
             background: #ddd; */
             display: block;
             color: #000;
-            border-left: 1px solid #666;
+            border-left: 1px solid #999;
             margin-left: 1em;
-            padding: 0 1em 0 .5em;
+            padding: 0 1em;
         }
     </style>
 </head>
