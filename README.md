@@ -4,7 +4,7 @@ Allows you to fetch YouTube channel/user pages via RSS.
 
 I made this after I've seen YouTube suppressing channel/user feeds from showing up in my subscription page.
 
-Usage is: ?channel=['channel_id' or 'user']:the-channel-or-user-id|['channel_id' or 'user']:the-channel-or-user-id|etc...
+Usage is a GET query string in the URL called "channel" with "|" delimited pairs of either "channel" or "user" and the channel/user ID separated by a ":"
 
 An example:
 
